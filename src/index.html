@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>El Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" />
+    <script src="renderer.js"></script>
+  </head>
+  <body>
+    <div class="main-content">
+      <label for="gross-salary-input" class="form-label">Salaire brut</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="gross-salary-input" aria-label="Salaire annuel brut">
+        <span class="input-group-text">€</span>
+      </div>
+
+      <br><br>
+      
+      <label for="months-paid" class="form-label">Nombre de mois</label>
+      <select id="months-paid" class="form-select">
+        <option selected value="12">12</option>
+        <option value="13">13</option>
+      </select>
+
+      <br><br>
+
+      <button class="btn btn-primary" id="calculate-btn" type="submit">Calculer</button>
+
+      <br><br><br><br>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Salaire brut</th>
+            <th scope="col">Salaire net (avant impôts)</th>
+            <th scope="col">Salaire net (après impôts)</th>
+            <th scope="col">Impôts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Annuel</th>
+            <td id="annual-gross-salary">€</td>
+            <td id="annual-net-salary">€</td>
+            <td id="annual-take-home-salary">€</td>
+            <td id="annual-taxes">€</td>
+          </tr>
+          <tr>
+            <th scope="row">Mensuel</th>
+            <td id="monthly-gross-salary">€</td>
+            <td id="monthly-net-salary">€</td>
+            <td id="monthly-take-home-salary">€</td>
+            <td id="monthly-taxes">€</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
